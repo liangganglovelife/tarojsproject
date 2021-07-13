@@ -1,3 +1,5 @@
+import path from 'path';
+
 const config = {
   projectName: 'myApp',
   date: '2021-7-8',
@@ -59,7 +61,18 @@ const config = {
         }
       }
     }
-  }
+  },
+  alias: {
+    '@/components': path.resolve(__dirname, '..', 'src/components'),
+    '@/utils': path.resolve(__dirname, '..', 'src/utils'),
+    '@/assets': path.resolve(__dirname, '..', 'src/assets'),
+    '@/config': path.resolve(__dirname, '..', 'src/config'),
+    '@/models': path.resolve(__dirname, '..', 'src/models'),
+    '@/libs': path.resolve(__dirname, '..', 'src/libs'),
+    '@/pages': path.resolve(__dirname, '..', 'src/pages'),
+    '@/cloud': path.resolve(__dirname, '..', 'src/cloud-images'),
+    '@/services': path.resolve(__dirname, '..', 'src/services'),
+  },
 }
 
 module.exports = function (merge) {
